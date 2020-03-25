@@ -11,7 +11,7 @@ def invert(v):
   return r
 
 con = r'--psm 6 -l eng -c tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-img = cv2.imread("3.png")
+img = cv2.imread("sample.png")
 img= cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 img=cv2.resize(img, (0,0), fx=2.5, fy=1.5)
 
