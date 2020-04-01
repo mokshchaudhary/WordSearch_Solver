@@ -15,35 +15,40 @@ img = cv2.imread("sample.png")
 img= cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 img=cv2.resize(img, (0,0), fx=2.5, fy=1.5)
 
-result= pytesseract.image_to_string(img,config= con)
-a=result
-a=a.replace(' ','')
+r= pytesseract.image_to_string(img,config= con)
+r=r.replace(' ','')
 
 to_find=["apple",'lemon',"banana","lime","orange","watermelon","grape","kiwi","strawberry","raspberry"]
 to_find=[x.upper() for x in to_find]
 #rint(to_find,end='\n\n\n')
-data = np.zeros((14,14),dtype='int')
 
-v=invert(a.split('\n'))
-z=np.array(v)
-b=""
-for i in v:
-  b=b+i+"\n"
+vr=''
+hr=r
+for i in invert(r.split('\n')):
+  vr=vr+i+"\n"
 
+print(r)
+print("1 ================================================")
 for i in to_find:
-  b=b.replace(i,'0'*len(i))
+  vr=vr.replace(i,'*'*len(i))
 for i in to_find:
-  a=a.replace(i,'0'*len(i))
+  hr=hr.replace(i,'*'*len(i))
 
-print(b)
-print("1 ===============================================")
+print(vr)
+#print("2 ===============================================")
 c=''
-for x in invert(a.split('\n')):
+for x in invert(vr.split('\n')):
   c=c+x+"\n"
-print(c)
-print("2 ===============================================")
-print(data)
-print("3 ===============================================")
-print(np.array(list(c)))
-print("4 ===============================================")
-print(np.char.rsplit(np.array(c),sep='\n'))
+vr=c
+print(vr)
+#print("3 ===============================================")
+
+
+f=r
+f=list(f)
+for i in range(len(f)):
+  if not hr[i]==vr[i]:
+    f[i]='*'
+
+for i in f:
+  print(i,end=' ')
