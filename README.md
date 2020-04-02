@@ -2,10 +2,9 @@
 Solves the Word Search Puzzles using Pytesseract.
 
 #### Demo:
-
-![Demo](https://media.giphy.com/media/W6jiIzFJ3qMHIezCr6/giphy.gif)
-
-
+<p align="center">
+<img src="https://media.giphy.com/media/W6jiIzFJ3qMHIezCr6/giphy.gif">
+</p>
 
 #### Requirements:
 
