@@ -55,11 +55,12 @@ vs=st2m(vs)
 vs=np.transpose(vs)
 
 #Combine Output
-
 f=st2m(r)
 for i in range(len(hs)):
     for x in range(len(hs[0])):
         if not hs[i][x]==vs[i][x]:
             f[i][x]='-'
+
+#Print Solution
 print(" Solution: ",end='\n\n')
 print(tostr(f).replace('',' '))
