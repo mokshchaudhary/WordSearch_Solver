@@ -2,10 +2,7 @@
 Solves the Word Search Puzzles using Pytesseract.
 
 #### Demo:
-
-![Demo](https://media.giphy.com/media/W6jiIzFJ3qMHIezCr6/giphy.gif)
-
-
+<img src="https://media.giphy.com/media/W6jiIzFJ3qMHIezCr6/giphy.gif">
 
 #### Requirements:
 
@@ -15,7 +12,7 @@ Solves the Word Search Puzzles using Pytesseract.
 
 #### How To:
 
-Change The sample.png to the desired picture also change the ```to_find=``` to the words to find the word.
+Change The ```img = cv2.imread("sample.png")``` to the desired picture also change the ```to_find=``` to the words to find the word.
 
 The code is sufficiently commented and can be modified easily.
 
